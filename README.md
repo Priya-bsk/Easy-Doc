@@ -1,7 +1,5 @@
 # Optimising Scheduling Algorithm in Telemedicine
 
-[![Platform](https://img.shields.io/badge/platform-Wix%20Velo-green)](https://www.wix.com/velo)  [![Status](https://img.shields.io/badge/status-Prototype-orange)]()
-
 A telemedicine appointment booking system that integrates **Operating System scheduling algorithms (FCFS & Priority Scheduling)** to manage healthcare appointments efficiently. Built on **Wix Velo + JavaScript**, the system ensures **fair scheduling, emergency handling, and conflict-free slot booking**.
 
 ---
