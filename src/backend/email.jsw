@@ -1,0 +1,62 @@
+
+/*import { SMTPClient } from 'emailjs';
+
+// This code will run when the page is ready
+$w.onReady(function () {
+    // Set up the onClick event for the submit button
+    $w("#submitButton").onClick(() => {
+        // Collect the email input from the user
+        const userEmail = $w("#emailInput").value; // Get the user's email input
+        const emailContent = 'I hope this works'; // Email body content
+
+        // Initialize SMTP client
+        const client = new SMTPClient({
+            user: 'osprojectvit@gmail.com',
+            password: 'your_app_password', // Replace with your SMTP password or app password
+            host: 'smtp.your-email.com', // Replace with your SMTP server host
+            ssl: true // Enable SSL
+        });
+
+        // Send the email
+        client.send({
+            text: emailContent, // Body of the email
+            from: 'You <your_email@example.com>', // Your name and email
+            to: `Someone <${userEmail}>`, // Recipient's email (from the input)
+            subject: 'Testing EmailJS' // Subject of the email
+        }, (err, message) => {
+            if (err) {
+                console.error('Email not sent:', err);
+                // Optional: Display an error message to the user
+                $w("#errorMessage").show();
+            } else {
+                console.log('Email sent successfully:', message);
+                // Optional: Show a success message to the user
+                $w("#successMessage").show();
+            }
+        });
+    });
+});
+*/
+
+
+
+import emailjs from 'emailjs-com';
+
+export function senDEmail(email) {
+    return emailjs.send("service_thcw52", "template_oz8mim", {
+        to_email: email // Ensure this matches your EmailJS template variable
+    }, "SEjpc5WG8kIxzzqG")
+    .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+    })
+    .catch((error) => {
+        console.error('Failed to send email:', error);
+    });
+}
+
+
+
+
+export function sendEmail(email) {
+    return Promise.resolve(); 
+}
